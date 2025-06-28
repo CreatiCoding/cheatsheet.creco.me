@@ -6,10 +6,13 @@
 
 This command allows you to load pre-specified documents directly within the terminal. It leverages [glow](https://github.com/charmbracelet/glow) to provide markdown viewing support right in your terminal.
 
-## requirements
+## Requirements
 
 - homebrew
 - wget
+
+## Demo
+<img width="512" alt="demo" src="https://github.com/user-attachments/assets/80a57930-b9e4-4c5f-98b9-eb76ac4a0935" />
 
 ## Install
 ```bash
