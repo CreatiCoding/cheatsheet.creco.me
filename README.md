@@ -1,5 +1,7 @@
 # cheatsheet.creco.me
 
+[![Hits](https://hits.sh/github.com/CreatiCoding/cheatsheet.creco.me.svg?view=today-total)](https://hits.sh/github.com/CreatiCoding/cheatsheet.creco.me/)
+
 터미널 내에서 미리 지정해둔 문서를 불러올 수 있는 커맨드입니다. [glow](https://github.com/charmbracelet/glow) 를 통해 Terminal 에서 markdown View를 지원합니다.
 
 This command allows you to load pre-specified documents directly within the terminal. It leverages [glow](https://github.com/charmbracelet/glow) to provide markdown viewing support right in your terminal.
