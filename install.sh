@@ -18,4 +18,6 @@ brew install glow
 
 wget -q -O /opt/homebrew/bin/ch https://creaticoding.github.io/cheatsheet.creco.me/cheatsheet.sh
 
+chmod +x /opt/homebrew/bin/ch
+
 echo "✅ ch 커맨드가 성공적으로 설치되었습니다."
