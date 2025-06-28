@@ -21,6 +21,12 @@ if [ "$command" == "update" ]; then
     return 0
 fi
 
+# update 커맨드 처리
+if [ "$command" == "uninstall" ]; then
+    wget -q -O - $BASH_URL/uninstall.sh | bash
+    return 0
+fi
+
 result=$(curl -XGET -L -s "$BASH_URL/keywords/$command")
 
 # result 안에 Page not found 가 있으면
