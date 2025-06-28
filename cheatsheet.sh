@@ -12,19 +12,19 @@ if [ -z "$command" ]; then
     echo "$ ch list"
     echo "$ ch [키워드]"
     echo ""
-    return 0
+    exit 0
 fi
 
 # update 커맨드 처리
 if [ "$command" == "update" ]; then
     wget -q -O - $BASH_URL/install.sh | bash
-    return 0
+    exit 0
 fi
 
 # update 커맨드 처리
 if [ "$command" == "uninstall" ]; then
     wget -q -O - $BASH_URL/uninstall.sh | bash
-    return 0
+    exit 0
 fi
 
 result=$(curl -XGET -L -s "$BASH_URL/keywords/$command")
@@ -33,7 +33,7 @@ result=$(curl -XGET -L -s "$BASH_URL/keywords/$command")
 if [[ $result == *"Page not found"* ]]; then
     echo "🚧 커맨드를 찾을 수 없습니다."
     echo "\"ch list\" 명령어로 키워드 목록을 확인해주세요."
-    return 0
+    exit 1
 fi
 
 printf '%s\n' "$result" | glow -
