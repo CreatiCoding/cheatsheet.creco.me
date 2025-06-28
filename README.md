@@ -13,3 +13,9 @@ wget -q -O - https://creaticoding.github.io/cheatsheet.creco.me/install.sh | bas
 ```bash
 ch update
 ```
+
+## Uninstall
+
+```bash
+ch uninstall
+```
