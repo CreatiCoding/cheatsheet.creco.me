@@ -1,2 +1,5 @@
-# https://github.com/div-ops/ts-project
+# degit
+
+```
 npx degit div-ops/ts-project
+```

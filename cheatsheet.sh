@@ -6,7 +6,7 @@ BASH_URL=https://creaticoding.github.io/cheatsheet.creco.me
 
 # 커맨드가 없으면 welcome 설명 출력
 if [ -z "$command" ]; then
-    echo "환영합니다! cheatsheet cli tool 입니다."
+    echo "🙌 환영합니다! cheatsheet cli tool 입니다."
     echo ""
     echo "예시: "
     echo "$ ch list"
@@ -25,9 +25,9 @@ result=$(curl -XGET -L -s "$BASH_URL/$command")
 
 # result 안에 Page not found 가 있으면
 if [[ $result == *"Page not found"* ]]; then
-    echo "커맨드를 찾을 수 없습니다."
+    echo "🚧 커맨드를 찾을 수 없습니다."
     echo "\"ch list\" 명령어로 키워드 목록을 확인해주세요."
     return 0
 fi
 
-printf '%s\n' "$result"
+printf '%s\n' "$result" | glow -

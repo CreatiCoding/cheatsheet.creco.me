@@ -1,11 +1,11 @@
 조회 가능한 키워드 목록
 
-yarn
-bash
-degit
-direnv
-docker
-gh-page
-hashbang
-iterm
-nvm
+- yarn
+- bash
+- degit
+- direnv
+- docker
+- gh-page
+- hashbang
+- iterm
+- nvm

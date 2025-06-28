@@ -10,7 +10,7 @@ yarn set version stable
 
 ## 2. Zero Install을 위한 gitignore 파일
 
-```
+```text
 .yarn/*
 !.yarn/cache
 !.yarn/patches

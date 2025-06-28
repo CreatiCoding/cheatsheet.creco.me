@@ -1,8 +1,17 @@
 # install
+
+```bash
 brew install direnv
+```
 
 # bash setting
+
+```bash
 eval "$(direnv hook bash)"
+```
 
 # zsh setting
+
+```bash
 eval "$(direnv hook zsh)"
+```
