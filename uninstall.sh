@@ -2,6 +2,6 @@
 
 set -e
 
-rm -rf /usr/local/bin/ch
+rm -rf /opt/homebrew/bin/ch
 
 echo "✅ ch 커맨드가 성공적으로 제거되었습니다."
