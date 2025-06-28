@@ -13,6 +13,12 @@ if [ -z "$command" ]; then
     return 0
 fi
 
+# update 커맨드 처리
+if [ "$command" == "update" ]; then
+    wget -O - https://creaticoding.github.io/cheatsheet.creco.me/install.sh | bash
+    return 0
+fi
+
 result=$(curl -XGET -L -s "https://creaticoding.github.io/cheatsheet.creco.me/$command")
 
 # result 안에 Page not found 가 있으면
