@@ -1,0 +1,13 @@
+nvm
+
+# 설치
+brew install nvm
+
+# 숫자만 변경
+nvm install 16
+
+# 기본 버전 변경 (다음 쉘 부터 적용)
+nvm alias default 16
+
+# 현재 쉘 버전 적용
+nvm use default

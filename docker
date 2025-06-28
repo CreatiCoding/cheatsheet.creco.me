@@ -1,0 +1,20 @@
+# Docker 이미지를 특정 명령으로 바로 실행
+docker run -it node:12-alpine3.14 sh
+
+# Docker Build 명령
+docker build --pull --target TARGET_NAME --network=host . -t TAG_NAME -f Dockerfile
+
+# attach to image
+docker run -it ImageID bash
+
+# Stop All Docker Containers
+docker kill $(docker ps -q)
+
+# Remove All Docker Containers
+docker rm $(docker ps -a -q)
+
+# Remove All Docker Images
+docker rmi $(docker images -q)
+
+# run with port
+docker run -it -p 5005:5005 ubuntu
