@@ -2,6 +2,8 @@
 
 command=$1
 
+BASH_URL=https://creaticoding.github.io/cheatsheet.creco.me
+
 # 커맨드가 없으면 welcome 설명 출력
 if [ -z "$command" ]; then
     echo "환영합니다! cheatsheet cli tool 입니다."
@@ -15,11 +17,11 @@ fi
 
 # update 커맨드 처리
 if [ "$command" == "update" ]; then
-    wget -O - https://creaticoding.github.io/cheatsheet.creco.me/install.sh | bash
+    wget -O - $BASH_URL/install.sh | bash
     return 0
 fi
 
-result=$(curl -XGET -L -s "https://creaticoding.github.io/cheatsheet.creco.me/$command")
+result=$(curl -XGET -L -s "$BASH_URL/$command")
 
 # result 안에 Page not found 가 있으면
 if [[ $result == *"Page not found"* ]]; then
