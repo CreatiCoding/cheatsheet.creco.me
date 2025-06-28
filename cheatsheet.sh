@@ -21,7 +21,7 @@ if [ "$command" == "update" ]; then
     exit 0
 fi
 
-# update 커맨드 처리
+# uninstall 커맨드 처리
 if [ "$command" == "uninstall" ]; then
     wget -q -O - $BASH_URL/uninstall.sh | bash
     exit 0
