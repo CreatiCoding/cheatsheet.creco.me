@@ -15,25 +15,26 @@ if [ -z "$command" ]; then
     exit 0
 fi
 
-# update 커맨드 처리
-if [ "$command" == "update" ]; then
-    wget -q -O - $BASH_URL/install.sh | bash
-    exit 0
-fi
+case $command in
+    "update")
+        wget -q -O - $BASH_URL/install.sh | bash
+        exit 0
+    ;;
+    "uninstall")
+        wget -q -O - $BASH_URL/uninstall.sh | bash
+        exit 0
+    ;;
+    *)
+        result=$(curl -XGET -L -s "$BASH_URL/keywords/$command")
 
-# uninstall 커맨드 처리
-if [ "$command" == "uninstall" ]; then
-    wget -q -O - $BASH_URL/uninstall.sh | bash
-    exit 0
-fi
+        # result 안에 Page not found 가 있으면
+        if [[ $result == *"Page not found"* ]]; then
+            echo "🚧 커맨드를 찾을 수 없습니다."
+            echo "\"ch list\" 명령어로 키워드 목록을 확인해주세요."
+            exit 1
+        fi
 
-result=$(curl -XGET -L -s "$BASH_URL/keywords/$command")
-
-# result 안에 Page not found 가 있으면
-if [[ $result == *"Page not found"* ]]; then
-    echo "🚧 커맨드를 찾을 수 없습니다."
-    echo "\"ch list\" 명령어로 키워드 목록을 확인해주세요."
-    exit 1
-fi
-
-printf '%s\n' "$result" | glow -
+        printf '%s\n' "$result" | glow -
+        exit 0
+    ;;
+esac
