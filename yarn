@@ -1,0 +1,37 @@
+# yarn berry 사용법
+
+## 1. yarn -> yarn berry
+
+- 아래 커맨드를 사용해 npm 환경 혹은 yarn v1 환경에서 yarn berry 로 넘어오세요!
+
+```bash
+yarn set version stable
+```
+
+## 2. Zero Install을 위한 gitignore 파일
+
+```
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+```
+
+## 3. VSCode + Yarn PnP + TypeScript
+
+- VSCode(or Cursor)에서 PnP 환경에서 TypeScript를 문제없이 사용하려면 아래 커맨드를 사용해주세요.
+
+```bash
+yarn dlx @yarnpkg/sdks vscode
+```
+
+## 4. Corepack
+
+- Node.js 14.19 이상, 16.9 이상 버전부터 Corepack이 기본 포함되어 제공됩니다. 별도의 글로벌 설치 없이 corepack enable 명령만으로 즉시 yarn을 활성화할 수 있어요!
+
+```bash
+corepack enable
+```
