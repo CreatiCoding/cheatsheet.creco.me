@@ -17,7 +17,7 @@ fi
 
 # update 커맨드 처리
 if [ "$command" == "update" ]; then
-    wget -O - $BASH_URL/install.sh | bash
+    wget -q -O - $BASH_URL/install.sh | bash
     return 0
 fi
 
