@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-wget -O - https://creaticoding.github.io/cheatsheet.creco.me/install.sh | bash
+wget -q -O - https://creaticoding.github.io/cheatsheet.creco.me/install.sh | bash
 ```
 
 ## Update
